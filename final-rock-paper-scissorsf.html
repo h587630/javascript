@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <style>
+      body{
+        background-color: rgb(25, 25, 25);
+        color:aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 30px;
+        align-items: center;
+
+      }
+
+      .title{
+        font-size: 30px;
+        font-weight: bold;
+        margin: 30px;
+
+
+      }
+      .move-button{
+        background-color: transparent;
+        border-color: 3px solid white;
+        width: 120px;
+        height: 120px;
+        border-radius:5cm;
+        margin-right: 10px;
+        cursor: pointer;
+       
+      }
+      .move-icon {
+        height: 80px;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button onclick="
+      playGame('rock');
+    "  style="margin-left: 20px;" class="move-button"><img src="images/rock-emoji.png" class="move-icon"></button>
+
+    <button onclick="
+      playGame('paper');
+    "  class="move-button" ><img src="images/paper-emoji.png" class="move-icon"></button>
+
+    <button onclick="
+      playGame('scissors');
+    "  class="move-button" ><img src="images/scissors-emoji.png" class="move-icon"></button>
+
+     <p class="js-result result" style="margin-top: 80px; font-size: large;"> Your result will show here.</p>
+     <p class="js-move" style="margin-top: 50px; font-size: large;"> Your move and computer move will show here.</p>
+    <p class="js-score" style="margin-top: 50px;"> </p>
+   
+
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScore();
+    " style="background-color:aliceblue; padding: 10px; cursor: pointer; margin-top: 50px; margin-left: 30px;">Reset Score</button>
+    <button onclick="autoPlay();"  style="background-color:aliceblue; padding: 10px; cursor: pointer; margin-top: 50px; margin-left: 50px;">Auto play</button>
+    
+
+    <script   src="scripts/rock-paper-scissorsf.js">
+      </script>
+  </body>
+</html>

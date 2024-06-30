@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To-do-list</title>
+        <style>
+            .input{
+             width: auto;
+            height: 40px; 
+            font-size: large; 
+            border-color: transparent;
+            }
+
+            .add{
+             width: 100px; 
+             height: 40px; 
+             font-size: large; 
+             background-color: rgb(88, 138, 88); 
+             border-color: transparent;
+            }
+            .delete{
+                width: 100px; 
+             height: 40px; 
+             font-size: large; 
+             background-color: rgb(179, 64, 69); 
+             border-color: transparent;
+            }
+            .list{
+             font-size: large; 
+             margin-top: 50px;
+             font-size: larger;
+             align-items: stretch;
+             margin-right: 100px;
+            }
+        </style>
+
+
+
+    </head>
+    <body style="background-image:  url('images/nature1.webp'); margin-left: 50px; margin-top: 50px;">
+        <h1>Todo List</h1>
+        <br>
+        <input placeholder="Enter the task" class="js-add-input input" >
+        <input type="date" class="js-dueDate  input">
+        <button onclick="addToDo();"  class="add">Add</button>
+        <p class="list">List of todos : </p>
+        <div class="js-todo-list list" > List of todos</div>
+        <script src="scripts/toDo-list.js">
+
+        </script>
+    </body>
+</html>
